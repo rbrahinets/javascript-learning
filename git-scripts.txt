@@ -1,0 +1,22 @@
+git clone git@github.com:<user>/<repository>.git  # clone repository
+
+git pull  # update local main branch
+git checkout -b <branch>  # create new branch and switch to it
+
+git status  # check changes
+
+git add "<file/directory>"  # add changed file/directory
+git add -A  # add all changed file
+
+git reset "<file>"  # undo command "git add"
+
+git commit -m "Some message"  # commit changes
+git push [--set-upstream origin <branch>]  # push changes on GitHub
+
+# In the GitHub repository:
+# - "Compare & pull request" button.
+# - "Merge pull request" button.
+# - "Confirm" button.
+
+git checkout main  # switch to main branch
+git pull  # update local main branch
