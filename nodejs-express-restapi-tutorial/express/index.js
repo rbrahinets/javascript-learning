@@ -23,7 +23,7 @@ app.get('/api/courses/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));
 
     if (!course) {
-        res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
+        return res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
     }
     
     res.send(course);
@@ -37,8 +37,7 @@ app.post('/api/courses', (req, res) => {
     const { error } = validateCourse(req.body);
 
     if (error) {
-        res.status(400).send(error.details[0].message);
-        return;
+        return res.status(400).send(error.details[0].message);
     }
 
     const course = {
@@ -54,15 +53,13 @@ app.put('/api/courses/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));
 
     if (!course) {
-        res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
-        return;
+        return res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
     }
 
     const { error } = validateCourse(req.body);
 
     if (error) {
-        res.status(400).send(error.details[0].message);
-        return;
+        return res.status(400).send(error.details[0].message);
     }
 
     course.name = req.body.name;
@@ -74,8 +71,7 @@ app.delete('/api/courses/:id', (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));
 
     if (!course) {
-        res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
-        return;
+        return res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
     }
     
     const index = courses.indexOf(course);
