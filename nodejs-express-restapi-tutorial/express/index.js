@@ -24,9 +24,9 @@ app.get('/api/courses/:id', (req, res) => {
 
     if (!course) {
         res.status(404).send(`The course with ID '${req.params.id}' was not found!`);
-    } else {
-        res.send(course);
     }
+    
+    res.send(course);
 });
 
 app.post('/api/courses', (req, res) => {
