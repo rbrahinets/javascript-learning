@@ -11,6 +11,9 @@ git add -A  # add all changed file
 git reset "<file>"  # undo command "git add"
 
 git commit -m "Some message"  # commit changes
+
+git reset --hard HEAD~1  # undo last commit (or with --soft)
+
 git push [--set-upstream origin <branch>]  # push changes on GitHub
 
 # In the GitHub repository:
