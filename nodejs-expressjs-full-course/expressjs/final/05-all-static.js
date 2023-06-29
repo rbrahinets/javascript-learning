@@ -5,7 +5,7 @@ const app = express();
 
 const PORT = 8080;
 
-// setu static and middleware
+// setup static and middleware
 app.use(express.static('./public'))
 
 // app.get('/', (req, res) => {
