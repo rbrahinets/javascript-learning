@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-// const logger = require('./final/logger');
-// const authorize = require('./final/authorize');
+// const logger = require('./logger');
+// const authorize = require('./authorize');
 
 const app = express();
 
