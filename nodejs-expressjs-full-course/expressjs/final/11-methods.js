@@ -1,12 +1,12 @@
 const express = require('express');
-const { people } = require('./final/data');
+const { people } = require('./data');
 
 const app = express();
 
 const PORT = 8080;
 
 // static assets
-app.use(express.static('./methods-public'));
+app.use(express.static('../methods-public'));
 
 // parse form data
 app.use(express.urlencoded({ extended: false }));
